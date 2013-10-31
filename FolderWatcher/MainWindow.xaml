@@ -33,7 +33,7 @@
                          TextChanged="FolderTextBox_TextChanged"/>
             </DockPanel>
 
-            <Label Grid.Column="0" Grid.Row="1">Hotfolder Status:</Label>
+            <Label Grid.Column="0" Grid.Row="1" VerticalContentAlignment="Center">Hotfolder Status:</Label>
             <DockPanel Grid.Column="1" Grid.Row="1">
                 <Button DockPanel.Dock="Right" Margin="6" Width="50"
                         x:Name="HotfolderControlButton"
@@ -44,7 +44,12 @@
             
             <Label Grid.Column="0" Grid.Row="3">Status Messages:</Label>
         </Grid>
-        <TextBox Margin="10,0,20,10"></TextBox>
-        
+        <Border BorderThickness="1" BorderBrush="Gray" Margin="10,3,20,7">
+            <ScrollViewer x:Name="StatusMessageScrollViewer">
+                <TextBlock x:Name="StatusMessagesTextBlock">
+                </TextBlock>
+            </ScrollViewer>
+        </Border>
+
     </DockPanel>
 </Window>
