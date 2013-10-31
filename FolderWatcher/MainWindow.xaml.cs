@@ -24,5 +24,22 @@ namespace FolderWatcher
         {
             InitializeComponent();
         }
+
+        private void BrowseFolder_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FolderTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void HotfolderControlButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        
     }
 }

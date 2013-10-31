@@ -26,12 +26,11 @@
             <Label Grid.Column="0" Grid.Row="0">JRQ Folder:</Label>
             <DockPanel Grid.Column="1" Grid.Row="0">
                 <Button DockPanel.Dock="Right" Margin="6" 
-                        x:Name="BrowseJRQFolder" 
-                        Click="BrowseJRQFolder_Click"
+                        x:Name="BrowseFolder" Click="BrowseFolder_Click"
                         Width="50" Content="..."/>
                 <TextBox DockPanel.Dock="Left" Margin="6" 
-                         x:Name="JRQFolderTextBox"
-                         TextChanged="JRQFolderTextBox_TextChanged"/>
+                         x:Name="FolderTextBox"
+                         TextChanged="FolderTextBox_TextChanged"/>
             </DockPanel>
 
             <Label Grid.Column="0" Grid.Row="1">Hotfolder Status:</Label>
