@@ -1,0 +1,51 @@
+﻿<Window x:Class="FolderWatcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <DockPanel LastChildFill="True">
+        <Label x:Name="TitleLabel" 
+               DockPanel.Dock="Top"
+                   Content="Hotfolder Test" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   Height="30" Width="Auto" 
+                   VerticalContentAlignment="Bottom" 
+                   Margin="10,0,0,10" Padding="0" 
+                   FontFamily="Segoe UI Light" FontSize="21"/>
+        <Grid Margin="10,0,20,0" DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="0">JRQ Folder:</Label>
+            <DockPanel Grid.Column="1" Grid.Row="0">
+                <Button DockPanel.Dock="Right" Margin="6" 
+                        x:Name="BrowseJRQFolder" 
+                        Click="BrowseJRQFolder_Click"
+                        Width="50" Content="..."/>
+                <TextBox DockPanel.Dock="Left" Margin="6" 
+                         x:Name="JRQFolderTextBox"
+                         TextChanged="JRQFolderTextBox_TextChanged"/>
+            </DockPanel>
+
+            <Label Grid.Column="0" Grid.Row="1">Hotfolder Status:</Label>
+            <DockPanel Grid.Column="1" Grid.Row="1">
+                <Button DockPanel.Dock="Right" Margin="6" Width="50"
+                        x:Name="HotfolderControlButton"
+                        Click="HotfolderControlButton_Click">Start</Button>
+                <Label  x:Name="HotfolderStateLabel"
+                        Margin="6">Stopped</Label>
+            </DockPanel>
+            
+            <Label Grid.Column="0" Grid.Row="3">Status Messages:</Label>
+        </Grid>
+        <TextBox Margin="10,0,20,10"></TextBox>
+        
+    </DockPanel>
+</Window>
