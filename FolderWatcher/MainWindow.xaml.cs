@@ -69,7 +69,6 @@ namespace FolderWatcher
                 AppendStatus("Started watching: " + FolderWatcherInstance.FolderToWatch);
                 HotfolderStateLabel.Content = "Running...";
                 HotfolderControlButton.Content = "Stop";
-                //StartProcessor();
             }
             else
             {
@@ -77,11 +76,7 @@ namespace FolderWatcher
                 AppendStatus("Stopped watching folder");
                 HotfolderStateLabel.Content = "Stopped";
                 HotfolderControlButton.Content = "Start";
-                //StopProcessor();
             }
-
-            //HotfolderStateLabel.Content = RimageProcessor.IsRunning ? "Running" : "Stopped";
-            //HotfolderControlButton.Content = RimageProcessor.IsRunning ? "Stop" : "Start";
         }
 
         
